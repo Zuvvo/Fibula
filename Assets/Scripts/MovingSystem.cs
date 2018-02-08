@@ -10,7 +10,8 @@ public class MovingSystem : MonoBehaviour {
     public MovingDirection CurrentMoveDirection;
 
     private RaycastHit2D scan;
-    private Vector3 endPosition;
+    private RaycastHit2D[] layerScans = new RaycastHit2D[9];
+    public Vector3 endPosition;
     private BoxCollider2D boxCollider;
     private Animator animator;
     private float DistanceToTarget = 0;
@@ -26,7 +27,9 @@ public class MovingSystem : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit(); // przenieść do game managment
 
         if (CurrentMoveDirection != MovingDirection.Idle) Move(CurrentMoveDirection);
-        else transform.position = NormalizePosition(transform.position);
+
+      // stara wersja solucji problemu z wyliczaniem pozycji z ułamkami
+     //   else transform.position = NormalizePosition(transform.position);
 
         if (transform.position != endPosition) return;
         if (Input.GetKey(KeyCode.S))
@@ -58,8 +61,9 @@ public class MovingSystem : MonoBehaviour {
                 SetAnimatorBoolsToFalse();
                 animator.SetBool("Down", true);
                 CurrentMoveDirection = MovingDirection.Down;
-                endPosition += Vector3.down;
-            }
+                endPosition += new Vector3(0, -0.5f, 0);                                        // w razie gdyby wyliczyło pozycję
+                endPosition = new Vector3(endPosition.x, (int)endPosition.y, endPosition.z);   // z ułamkiem i zablokowało ludzika
+            }                                                                                 //..... i tak źle to działa.....
         }
         else if (direction == MovingDirection.Up)
         {
@@ -69,7 +73,8 @@ public class MovingSystem : MonoBehaviour {
                 SetAnimatorBoolsToFalse();
                 animator.SetBool("Up", true);
                 CurrentMoveDirection = MovingDirection.Up;
-                endPosition += Vector3.up;
+                endPosition += new Vector3(0, 1.5f, 0);
+                endPosition = new Vector3(endPosition.x, (int)endPosition.y, endPosition.z);
             }
         }
         else if (direction == MovingDirection.Left)
@@ -80,7 +85,8 @@ public class MovingSystem : MonoBehaviour {
                 SetAnimatorBoolsToFalse();
                 animator.SetBool("Left", true);
                 CurrentMoveDirection = MovingDirection.Left;
-                endPosition += Vector3.left;
+                endPosition += new Vector3(-0.5f, 0, 0);
+                endPosition = new Vector3((int)endPosition.x, endPosition.y, endPosition.z);
             }
         }
         else if (direction == MovingDirection.Right)
@@ -91,7 +97,8 @@ public class MovingSystem : MonoBehaviour {
                 SetAnimatorBoolsToFalse();
                 animator.SetBool("Right", true);
                 CurrentMoveDirection = MovingDirection.Right;
-                endPosition += Vector3.right;
+                endPosition += new Vector3(1.5f, 0, 0);
+                endPosition = new Vector3((int)endPosition.x, endPosition.y, endPosition.z);
             }
         }
     }
@@ -110,10 +117,10 @@ public class MovingSystem : MonoBehaviour {
             {
                 DistanceToTarget = endPosition.y - transform.position.y;
             }
-            if (direction == MovingDirection.Down) boxCollider.offset = new Vector2(0, DistanceToTarget +0.05f);
-            else if (direction == MovingDirection.Up) boxCollider.offset = new Vector2(0, DistanceToTarget-0.05f);
-            else if (direction == MovingDirection.Left) boxCollider.offset = new Vector2(DistanceToTarget+0.05f, 0);
-            else if (direction == MovingDirection.Right) boxCollider.offset = new Vector2(DistanceToTarget-0.05f, 0);
+            if (direction == MovingDirection.Down) boxCollider.offset = new Vector2(0, DistanceToTarget);
+            else if (direction == MovingDirection.Up) boxCollider.offset = new Vector2(0, DistanceToTarget);
+            else if (direction == MovingDirection.Left) boxCollider.offset = new Vector2(DistanceToTarget, 0);
+            else if (direction == MovingDirection.Right) boxCollider.offset = new Vector2(DistanceToTarget, 0);
 
         }
         else
@@ -126,8 +133,8 @@ public class MovingSystem : MonoBehaviour {
     }
     private Vector3 NormalizePosition(Vector3 position)
     {
-        position.x = (int)position.x + 0.5f;
-        position.y = (int)position.y + 0.5f;
+        position.x = (int)(position.x + 0.5f);
+        position.y = (int)(position.y + 0.5f);
 
         return position;
     }
@@ -142,5 +149,10 @@ public class MovingSystem : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) return true;
         else return false;
+    }
+
+    private void ScanForLayers()
+    {
+      // layerScans[0] = 
     }
 }

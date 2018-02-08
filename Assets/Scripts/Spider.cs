@@ -70,7 +70,7 @@ public class Spider : MonoBehaviour {
                 DistanceToTarget = pos.y - transform.position.y;
             }
             if (DistanceToTarget > 0) DistanceToTarget *= -1;
-            boxCollider.offset = new Vector2(0, DistanceToTarget);
+            boxCollider.offset = new Vector2(0, DistanceToTarget+0.04f);
         }
         transform.position = Vector3.MoveTowards(transform.position, pos, _speed * Time.deltaTime);
         if (pos == transform.position)

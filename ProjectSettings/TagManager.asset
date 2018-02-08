@@ -6,6 +6,10 @@ TagManager:
   tags:
   - blockade
   - Canvas
+  - teksty
+  - Ustawienia
+  - Statystyki
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX
@@ -43,6 +47,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ground
+    uniqueID: 3160483625
+    locked: 0
+  - name: buildings
+    uniqueID: 1707735643
+    locked: 0
+  - name: enemies
+    uniqueID: 359037159
+    locked: 0
   - name: player
     uniqueID: 2868423671
+    locked: 0
+  - name: stuff above
+    uniqueID: 508380717
     locked: 0
