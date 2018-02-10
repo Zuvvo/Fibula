@@ -21,7 +21,6 @@ public class RenderBody : MonoBehaviour {
     }
     
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Tab)) RunPanel();
         if (BodyEditor.active) SetColors();
     }
 
@@ -37,13 +36,13 @@ public class RenderBody : MonoBehaviour {
             Colors[i] = new Color(255, 255, 255, 255);
         }
     }
-    public void SetColorSliders()
+    private void SetColorSliders()
     {
         Colors[(int)SelectedBodyPart] = new Color(Sliders[0].value, Sliders[1].value, Sliders[2].value, 255);
         PreviewHolder.transform.GetChild((int)SelectedBodyPart).GetComponent<Image>().color = new Color(Sliders[0].value, Sliders[1].value, Sliders[2].value, 255);
         
     }
-    private void RunPanel()
+    public void RunPanel()
     {
         if (!BodyEditor.active)
         {
@@ -68,7 +67,7 @@ public class RenderBody : MonoBehaviour {
         Sliders[1].value = Sprites[(int)SelectedBodyPart].color.g;
         Sliders[2].value = Sprites[(int)SelectedBodyPart].color.b;
     }
-    public void SetPreview()
+    private void SetPreview()
     {
         for(int i = 0; i < Sprites.Length; i++)
         {

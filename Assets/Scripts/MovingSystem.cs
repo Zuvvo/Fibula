@@ -24,8 +24,7 @@ public class MovingSystem : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit(); // przenieść do game managment
-
+        if (Input.GetKeyDown(KeyCode.Z)) transform.position = NormalizePosition(transform.position); // w razie zablokowania xd
         if (CurrentMoveDirection != MovingDirection.Idle) Move(CurrentMoveDirection);
 
       // stara wersja solucji problemu z wyliczaniem pozycji z ułamkami
@@ -63,7 +62,12 @@ public class MovingSystem : MonoBehaviour {
                 CurrentMoveDirection = MovingDirection.Down;
                 endPosition += new Vector3(0, -0.5f, 0);                                        // w razie gdyby wyliczyło pozycję
                 endPosition = new Vector3(endPosition.x, (int)endPosition.y, endPosition.z);   // z ułamkiem i zablokowało ludzika
-            }                                                                                 //..... i tak źle to działa.....
+            }
+            //..... i tak źle to działa.....
+            else
+            {
+                animator.SetBool("Idle", true);
+            }
         }
         else if (direction == MovingDirection.Up)
         {
@@ -75,6 +79,10 @@ public class MovingSystem : MonoBehaviour {
                 CurrentMoveDirection = MovingDirection.Up;
                 endPosition += new Vector3(0, 1.5f, 0);
                 endPosition = new Vector3(endPosition.x, (int)endPosition.y, endPosition.z);
+            }
+            else
+            {
+                animator.SetBool("Idle", true);
             }
         }
         else if (direction == MovingDirection.Left)
@@ -88,6 +96,10 @@ public class MovingSystem : MonoBehaviour {
                 endPosition += new Vector3(-0.5f, 0, 0);
                 endPosition = new Vector3((int)endPosition.x, endPosition.y, endPosition.z);
             }
+            else
+            {
+                animator.SetBool("Idle", true);
+            }
         }
         else if (direction == MovingDirection.Right)
         {
@@ -99,6 +111,10 @@ public class MovingSystem : MonoBehaviour {
                 CurrentMoveDirection = MovingDirection.Right;
                 endPosition += new Vector3(1.5f, 0, 0);
                 endPosition = new Vector3((int)endPosition.x, endPosition.y, endPosition.z);
+            }
+            else
+            {
+                animator.SetBool("Idle", true);
             }
         }
     }
@@ -133,8 +149,8 @@ public class MovingSystem : MonoBehaviour {
     }
     private Vector3 NormalizePosition(Vector3 position)
     {
-        position.x = (int)(position.x + 0.5f);
-        position.y = (int)(position.y + 0.5f);
+        position.x = (int)(position.x);
+        position.y = (int)(position.y);
 
         return position;
     }
