@@ -1,0 +1,10 @@
+14-2-2018 14:47:40 	[Trace]	#### Server boot ####
+14-2-2018 14:47:40 	[Trace]	#### Server boot ####
+14-2-2018 14:47:40 	[Log]	Server mounted, listening on port 4296
+14-2-2018 14:47:40 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin.LoginPlugin
+14-2-2018 14:47:40 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+14-2-2018 14:47:40 	[Trace]	Found a total of 2 plugins.
+14-2-2018 14:47:40 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+14-2-2018 14:47:40 	[Log]	Loaded plugin: LoginPlugin Version: 1.0
+14-2-2018 14:47:46 	[Log]	Connected: 127.0.0.1:4690
+14-2-2018 14:47:50 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3

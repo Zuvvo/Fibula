@@ -1,0 +1,11 @@
+LoginTag:					10
+LoginSubjectUserLogin:		1
+LoginSubjectLogoutUser:		2
+LoginSubjectAddUser:		3
+LoginSubjectLoginSuccess:	4
+LoginSubjectLoginFailed:	5
+LoginSubjectLogoutSuccess:	6
+LoginSubjectAddUserSuccess:	7
+LoginSubjectAddUserFailed:	8
+AllowAddUser:			True
+Debug:						True

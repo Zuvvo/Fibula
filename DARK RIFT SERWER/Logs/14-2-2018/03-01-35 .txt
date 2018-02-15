@@ -1,0 +1,30 @@
+14-2-2018 03:01:35 	[Trace]	#### Server boot ####
+14-2-2018 03:01:35 	[Trace]	#### Server boot ####
+14-2-2018 03:01:35 	[Log]	Server mounted, listening on port 4296
+14-2-2018 03:01:35 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin
+14-2-2018 03:01:35 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+14-2-2018 03:01:35 	[Trace]	Found a total of 2 plugins.
+14-2-2018 03:01:35 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+14-2-2018 03:01:35 	[Log]	Loaded plugin: LoginPlugin Version: 1.0
+14-2-2018 03:01:38 	[Log]	Connected: 127.0.0.1:10672
+14-2-2018 03:01:43 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 03:01:54 	[Trace]	Executing command AddUser
+14-2-2018 03:02:01 	[Trace]	Executing command AddUser
+14-2-2018 03:02:01 	[Log]	[LoginPlugin] Add user failed.DarkRift.DatabaseException: Authentication to host 'localhost' for user 'GM' using method 'mysql_native_password' failed with message: Access denied for user 'GM'@'localhost' (using password: YES) ---> MySql.Data.MySqlClient.MySqlException: Authentication to host 'localhost' for user 'GM' using method 'mysql_native_password' failed with message: Access denied for user 'GM'@'localhost' (using password: YES) ---> MySql.Data.MySqlClient.MySqlException: Access denied for user 'GM'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at MySQLConnector.Connector.ExecuteScalar(String query, QueryParameter[] parameters)
+   --- End of inner exception stack trace ---
+   at MySQLConnector.Connector.ExecuteScalar(String query, QueryParameter[] parameters)
+   at LoginPlugin.LoginPlugin.CheckUser(String _username, String _password)

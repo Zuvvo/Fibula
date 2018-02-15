@@ -1,0 +1,26 @@
+14-2-2018 15:43:18 	[Trace]	#### Server boot ####
+14-2-2018 15:43:18 	[Trace]	#### Server boot ####
+14-2-2018 15:43:18 	[Log]	Server mounted, listening on port 4296
+14-2-2018 15:43:18 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin.LoginPlugin
+14-2-2018 15:43:18 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+14-2-2018 15:43:18 	[Trace]	Found a total of 2 plugins.
+14-2-2018 15:43:18 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+14-2-2018 15:43:18 	[Log]	Loaded plugin: LoginPlugin Version: 1.0
+14-2-2018 15:43:26 	[Log]	Connected: 127.0.0.1:7209
+14-2-2018 15:43:31 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 15:43:31 	[Log]	Message sent
+14-2-2018 15:43:33 	[Log]	[LoginPlugin] New User: 32113231
+14-2-2018 15:43:33 	[Log]	AddUser
+14-2-2018 16:31:45 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 16:31:45 	[Log]	Message sent
+14-2-2018 16:31:45 	[Log]	[LoginPlugin] New User: 3333
+14-2-2018 16:31:45 	[Log]	AddUser
+14-2-2018 16:31:50 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 16:31:50 	[Log]	Message sent
+14-2-2018 16:31:50 	[Log]	AddUser
+14-2-2018 16:31:51 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 16:31:51 	[Log]	Message sent
+14-2-2018 16:31:51 	[Log]	AddUser
+14-2-2018 16:32:15 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 16:32:15 	[Log]	Disconnected: 127.0.0.1:7209
+14-2-2018 16:32:16 	[Log]	Message sent

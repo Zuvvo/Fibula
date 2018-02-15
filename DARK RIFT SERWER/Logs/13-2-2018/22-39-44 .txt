@@ -1,0 +1,8 @@
+13-2-2018 22:39:44 	[Trace]	#### Server boot ####
+13-2-2018 22:39:44 	[Trace]	#### Server boot ####
+13-2-2018 22:39:44 	[Log]	Server mounted, listening on port 4296
+13-2-2018 22:39:44 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+13-2-2018 22:39:44 	[Trace]	Found a total of 1 plugins.
+13-2-2018 22:39:44 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+13-2-2018 22:39:53 	[Log]	Connected: 127.0.0.1:7937
+13-2-2018 22:39:59 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1

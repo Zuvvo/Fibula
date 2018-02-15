@@ -1,0 +1,8 @@
+13-2-2018 03:07:29 	[Trace]	#### Server boot ####
+13-2-2018 03:07:29 	[Trace]	#### Server boot ####
+13-2-2018 03:07:29 	[Log]	Server mounted, listening on port 4296
+13-2-2018 03:07:29 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+13-2-2018 03:07:29 	[Trace]	Found a total of 1 plugins.
+13-2-2018 03:07:29 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+13-2-2018 03:21:12 	[Error]	No such command found!
+13-2-2018 03:21:12 	[Trace]	Could not execute command asdasd as was not present in commands dictionary.

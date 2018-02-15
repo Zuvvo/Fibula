@@ -1,0 +1,7 @@
+13-2-2018 23:09:40 	[Trace]	#### Server boot ####
+13-2-2018 23:09:40 	[Trace]	#### Server boot ####
+13-2-2018 23:09:40 	[Fatal]	System.Net.Sockets.SocketException (0x80004005): Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   at DarkRift.DarkRiftServer.FinishBootstrapping(IManualDataProcessor manualDataProcessor, Type[] forceLoadPlugins)

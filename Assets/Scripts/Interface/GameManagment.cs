@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManagment : MonoBehaviour {
     private GameObject player;
+    public GameObject Minimap;
 
     // Use this for initialization
     private void Awake()
@@ -19,6 +20,11 @@ public class GameManagment : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            if (!Minimap.active) Minimap.SetActive(true);
+            else Minimap.SetActive(false);
+        }
         if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
         if (Input.GetKeyDown(KeyCode.Tab)) player.GetComponent<RenderBody>().RunPanel();
         if (Input.GetKeyDown(KeyCode.P))

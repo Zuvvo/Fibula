@@ -1,0 +1,30 @@
+14-2-2018 02:25:25 	[Trace]	#### Server boot ####
+14-2-2018 02:25:25 	[Trace]	#### Server boot ####
+14-2-2018 02:25:25 	[Log]	Server mounted, listening on port 4296
+14-2-2018 02:25:25 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin
+14-2-2018 02:25:25 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+14-2-2018 02:25:25 	[Trace]	Found a total of 2 plugins.
+14-2-2018 02:25:25 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+14-2-2018 02:25:25 	[Log]	Loaded plugin: LoginPlugin Version: 1.0
+14-2-2018 02:26:08 	[Error]	No such command found!
+14-2-2018 02:26:08 	[Trace]	Could not execute command help as was not present in commands dictionary.
+14-2-2018 02:26:46 	[Trace]	Executing command LPDebug
+14-2-2018 02:26:46 	[Log]	[LoginPlugin] Debug is False
+14-2-2018 02:26:59 	[Trace]	Executing command LPDebug
+14-2-2018 02:26:59 	[Log]	[LoginPlugin] Debug is True
+14-2-2018 02:27:09 	[Trace]	Executing command AddUser
+14-2-2018 02:27:10 	[Log]	[LoginPlugin] New User: test
+14-2-2018 02:29:26 	[Log]	Connected: 127.0.0.1:9228
+14-2-2018 02:29:56 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 02:37:17 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 02:37:17 	[Log]	Disconnected: 127.0.0.1:9228
+14-2-2018 02:37:24 	[Log]	Connected: 127.0.0.1:9588
+14-2-2018 02:37:41 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 02:37:41 	[Log]	Disconnected: 127.0.0.1:9588
+14-2-2018 02:38:06 	[Log]	Connected: 127.0.0.1:9614
+14-2-2018 02:38:10 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 02:38:15 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 02:38:15 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 02:38:17 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 02:38:17 	[Log]	Disconnected: 127.0.0.1:9614
+14-2-2018 02:47:44 	[Log]	Connected: 127.0.0.1:10057

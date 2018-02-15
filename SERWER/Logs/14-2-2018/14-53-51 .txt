@@ -1,0 +1,38 @@
+14-2-2018 14:53:51 	[Trace]	#### Server boot ####
+14-2-2018 14:53:51 	[Trace]	#### Server boot ####
+14-2-2018 14:53:51 	[Log]	Server mounted, listening on port 4296
+14-2-2018 14:53:51 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin.LoginPlugin
+14-2-2018 14:53:51 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+14-2-2018 14:53:51 	[Trace]	Found a total of 2 plugins.
+14-2-2018 14:53:51 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+14-2-2018 14:53:51 	[Log]	Loaded plugin: LoginPlugin Version: 1.0
+14-2-2018 14:54:02 	[Log]	Connected: 127.0.0.1:5046
+14-2-2018 14:54:07 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 14:56:30 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 14:56:30 	[Log]	Disconnected: 127.0.0.1:5046
+14-2-2018 14:58:06 	[Log]	Connected: 127.0.0.1:5265
+14-2-2018 14:58:09 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 14:58:31 	[Trace]	Executing command AddUser
+14-2-2018 14:58:31 	[Log]	[LoginPlugin] New User: asd
+14-2-2018 14:59:16 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 14:59:16 	[Log]	Disconnected: 127.0.0.1:5265
+14-2-2018 14:59:21 	[Log]	Connected: 127.0.0.1:5318
+14-2-2018 14:59:24 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 15:00:16 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 15:00:16 	[Log]	Disconnected: 127.0.0.1:5318
+14-2-2018 15:00:21 	[Log]	Connected: 127.0.0.1:5361
+14-2-2018 15:00:24 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 15:01:09 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 15:01:09 	[Log]	Disconnected: 127.0.0.1:5361
+14-2-2018 15:01:14 	[Log]	Connected: 127.0.0.1:5396
+14-2-2018 15:01:17 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 15:01:27 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 15:01:27 	[Log]	Disconnected: 127.0.0.1:5396
+14-2-2018 15:02:49 	[Trace]	Executing command AddUser
+14-2-2018 15:02:49 	[Log]	[LoginPlugin] New User: 093
+14-2-2018 15:04:52 	[Log]	Connected: 127.0.0.1:5563
+14-2-2018 15:04:55 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 15:05:57 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 15:05:57 	[Log]	Disconnected: 127.0.0.1:5563
+14-2-2018 15:09:33 	[Trace]	Executing command AddUser
+14-2-2018 15:09:33 	[Log]	[LoginPlugin] New User: 9192

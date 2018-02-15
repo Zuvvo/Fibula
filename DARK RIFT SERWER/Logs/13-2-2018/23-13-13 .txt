@@ -1,0 +1,9 @@
+13-2-2018 23:13:13 	[Trace]	#### Server boot ####
+13-2-2018 23:13:13 	[Trace]	#### Server boot ####
+13-2-2018 23:13:13 	[Log]	Server mounted, listening on port 4296
+13-2-2018 23:13:13 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin
+13-2-2018 23:13:13 	[Trace]	Found a total of 1 plugins.
+13-2-2018 23:13:13 	[Fatal]	[LoginPlugin] User Logout Subject could not be found in settings.cnf
+13-2-2018 23:13:13 	[Log]	Shutting down server...
+13-2-2018 23:13:13 	[Trace]	Closing database
+13-2-2018 23:13:13 	[Trace]	#### Server stop ####

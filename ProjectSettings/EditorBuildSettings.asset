@@ -9,5 +9,8 @@ EditorBuildSettings:
     path: Assets/Menu.unity
     guid: 004f469affb8e2148b5beedff48d5cd6
   - enabled: 1
+    path: Assets/Char Builder.unity
+    guid: d7220c39be1f5cc4e8ecb5047a323c78
+  - enabled: 1
     path: Assets/Start.unity
     guid: 67b30d41125ac654fb8cd5c0b3da3880

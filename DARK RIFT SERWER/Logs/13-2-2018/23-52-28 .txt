@@ -1,0 +1,17 @@
+13-2-2018 23:52:28 	[Trace]	#### Server boot ####
+13-2-2018 23:52:28 	[Trace]	#### Server boot ####
+13-2-2018 23:52:28 	[Log]	Server mounted, listening on port 4296
+13-2-2018 23:52:28 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin
+13-2-2018 23:52:28 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+13-2-2018 23:52:28 	[Trace]	Found a total of 2 plugins.
+13-2-2018 23:52:28 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+13-2-2018 23:52:29 	[Error]	Plugin LoginPlugin.LoginPlugin failed to instantiate: 
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.IO.FileNotFoundException: Could not load file or assembly 'MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d' or one of its dependencies. The system cannot find the file specified.
+   at MySQLConnector.Connector.ExecuteNonQuery(String query, QueryParameter[] parameters)
+   at LoginPlugin.LoginPlugin..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at DarkRift.PluginManager.LoadPlugins(Type[] forceLoadPlugins)

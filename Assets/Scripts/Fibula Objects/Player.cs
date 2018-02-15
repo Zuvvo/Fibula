@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : FibulaObject {
+public class FibulaPlayer : FibulaObject {
 
     public int hp { get; set; }
     public int mana { get; set; }
+    public int speed;
 
     public enum Classes { Warrior, Mage, Druid, Shaman, Rogue};
     public Classes PlayerClass;
@@ -27,11 +28,12 @@ public class Player : FibulaObject {
         }
     }
 
-    public Player()
+    public FibulaPlayer()
     {
         PlayerClass = Classes.Warrior;
         hp = 100;
         mana = 100;
+        speed = 5;
     }
 
 }

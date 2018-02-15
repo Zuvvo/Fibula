@@ -1,0 +1,27 @@
+14-2-2018 03:12:32 	[Trace]	#### Server boot ####
+14-2-2018 03:12:32 	[Trace]	#### Server boot ####
+14-2-2018 03:12:32 	[Log]	Server mounted, listening on port 4296
+14-2-2018 03:12:32 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin
+14-2-2018 03:12:32 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\DARK RIFT SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+14-2-2018 03:12:32 	[Trace]	Found a total of 2 plugins.
+14-2-2018 03:12:32 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+14-2-2018 03:12:32 	[Log]	Loaded plugin: LoginPlugin Version: 1.0
+14-2-2018 03:12:39 	[Log]	Connected: 127.0.0.1:11143
+14-2-2018 03:12:42 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 03:12:59 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 03:12:59 	[Log]	Disconnected: 127.0.0.1:11143
+14-2-2018 03:15:17 	[Log]	Connected: 127.0.0.1:11256
+14-2-2018 03:15:22 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 03:15:28 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 03:15:28 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 03:15:36 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 03:15:36 	[Log]	Disconnected: 127.0.0.1:11256
+14-2-2018 03:15:52 	[Log]	Connected: 127.0.0.1:11282
+14-2-2018 03:15:55 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 03:15:59 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 03:16:01 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 03:16:01 	[Log]	Disconnected: 127.0.0.1:11282
+14-2-2018 03:21:45 	[Log]	Connected: 127.0.0.1:11636
+14-2-2018 03:21:49 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+14-2-2018 03:21:58 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+14-2-2018 03:21:58 	[Log]	Disconnected: 127.0.0.1:11636
