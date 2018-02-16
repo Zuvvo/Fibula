@@ -10,12 +10,18 @@ namespace Fibula.Login
 
     public class LoginManager : MonoBehaviour
     {
-
         public static int userID { private set; get; }
         public static bool isLoggedIn { private set; get; }
 
         public delegate void SuccessfulLoginEventHandler(int userID, bool hasuma);
-        public static event SuccessfulLoginEventHandler onSuccessfullLogin;
+        public delegate void FailedLoginEventHandler(int reason);
+        public delegate void SuccessfulAddUserEventHandler();
+        public delegate void FailedAddUserEventHandler();
+
+        public static event SuccessfulLoginEventHandler onSuccessfulLogin;
+        public static event FailedLoginEventHandler onFailedLogin;
+        public static event SuccessfulAddUserEventHandler onSuccessfulAddUser;
+        public static event FailedAddUserEventHandler onFailedAddUser;
 
         public static HashType myHashType = HashType.SHA256;
 
@@ -66,7 +72,7 @@ namespace Fibula.Login
         {
             if(_loginT == NT.LoginT)
             {
-                if(_loginS == NT.LoginS.loginUserSuccess)
+                if (_loginS == NT.LoginS.loginUserSuccess)
                 {
                     bool _hasuma;
                     DarkRiftReader reader = (DarkRiftReader)data;
@@ -76,8 +82,25 @@ namespace Fibula.Login
 
                     isLoggedIn = true;
 
-                    if (onSuccessfullLogin != null)
-                        onSuccessfullLogin(userID, _hasuma);
+                    if (onSuccessfulLogin != null)
+                        onSuccessfulLogin(userID, _hasuma);
+                }
+                if(_loginS == NT.LoginS.loginUserFailed)
+                {
+
+                    int _reason = (int)data;
+                    if (onFailedLogin != null)
+                        onFailedLogin(_reason);
+                }
+                if(_loginS  == NT.LoginS.addUserSuccess)
+                {
+                    if (onSuccessfulAddUser != null)
+                        onSuccessfulAddUser();
+                }
+                if(_loginS == NT.LoginS.addUserFailed)
+                {
+                    if (onSuccessfulAddUser != null)
+                        onFailedAddUser();
                 }
             }
         }

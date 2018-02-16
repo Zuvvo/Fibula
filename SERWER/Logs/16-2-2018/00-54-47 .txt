@@ -1,0 +1,46 @@
+16-2-2018 00:54:47 	[Trace]	#### Server boot ####
+16-2-2018 00:54:47 	[Trace]	#### Server boot ####
+16-2-2018 00:54:47 	[Log]	Server mounted, listening on port 4296
+16-2-2018 00:54:47 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin.LoginPlugin
+16-2-2018 00:54:47 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+16-2-2018 00:54:47 	[Trace]	Found a total of 2 plugins.
+16-2-2018 00:54:47 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+16-2-2018 00:54:47 	[Log]	Loaded plugin: LoginPlugin Version: 1.0
+16-2-2018 01:00:06 	[Error]	No such command found!
+16-2-2018 01:00:06 	[Trace]	Could not execute command asd as was not present in commands dictionary.
+16-2-2018 01:00:08 	[Error]	No such command found!
+16-2-2018 01:00:08 	[Trace]	Could not execute command ffffffff as was not present in commands dictionary.
+16-2-2018 01:00:42 	[Log]	Connected: 127.0.0.1:8258
+16-2-2018 01:00:45 	[Log]	Disconnected: 127.0.0.1:8258
+16-2-2018 01:00:45 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 01:01:06 	[Log]	Connected: 127.0.0.1:8288
+16-2-2018 01:01:12 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 01:01:14 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+16-2-2018 01:01:16 	[Log]	[LoginPlugin] User 123 could not login
+16-2-2018 01:01:16 	[Log]	AddUser
+16-2-2018 01:01:16 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 01:01:16 	[Log]	[LoginPlugin] User 123 could not login
+16-2-2018 01:01:22 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+16-2-2018 01:01:22 	[Log]	AddUser
+16-2-2018 01:01:22 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 01:01:22 	[Log]	[LoginPlugin] User 123 could not login
+16-2-2018 01:01:25 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+16-2-2018 01:01:25 	[Log]	AddUser
+16-2-2018 01:01:25 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 01:01:25 	[Log]	[LoginPlugin] User 123 could not login
+16-2-2018 01:01:29 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 01:01:29 	[Log]	[LoginPlugin] User 123 could not login
+16-2-2018 01:02:27 	[Trace]	Executing command UserCreate
+16-2-2018 01:02:27 	[Log]	Add User creation is on
+16-2-2018 01:02:32 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-3
+16-2-2018 01:02:32 	[Log]	AddUser
+16-2-2018 01:02:32 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 01:02:32 	[Log]	[LoginPlugin] User 123 could not login
+16-2-2018 01:02:40 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 01:02:40 	[Log]	[LoginPlugin] User 123 could not login
+16-2-2018 01:02:53 	[Error]	No such command found!
+16-2-2018 01:02:53 	[Trace]	Could not execute command log as was not present in commands dictionary.
+16-2-2018 01:03:10 	[Error]	No such command found!
+16-2-2018 01:03:10 	[Trace]	Could not execute command log as was not present in commands dictionary.
+16-2-2018 01:03:13 	[Error]	No such command found!
+16-2-2018 01:03:13 	[Trace]	Could not execute command log as was not present in commands dictionary.

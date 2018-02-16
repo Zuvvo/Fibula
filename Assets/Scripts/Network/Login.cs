@@ -5,16 +5,32 @@ using UnityEngine.UI;
 using DarkRift;
 using Fibula.Login;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class Login : MonoBehaviour {
     public InputField UsernameInput;
     public InputField PasswordInput;
+    public GameObject LoginFailedPanel;
 
 
     private void Start()
     {
-        LoginManager.onSuccessfullLogin += LoadLevel;
+        LoginManager.onSuccessfulLogin += LoadLevel;
+        LoginManager.onFailedLogin += LoginFailed;
+        LoginManager.onSuccessfulAddUser += ButtonLogin;
+        LoginManager.onFailedAddUser += ButtonQuit;
     }
+
+    private void OnApplicationQuit()
+    {
+        LoginManager.onSuccessfulLogin += LoadLevel;
+        LoginManager.onFailedLogin += LoginFailed;
+        LoginManager.onSuccessfulAddUser += ButtonLogin;
+        LoginManager.onFailedAddUser += ButtonQuit;
+    }
+
     public void ButtonLogin()
     {
         LoginManager.Login(UsernameInput.text, PasswordInput.text);
@@ -26,6 +42,14 @@ public class Login : MonoBehaviour {
     public void ButtonQuit()
     {
         Application.Quit();
+
+        #if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+        #endif
+    }
+    public void ButtonOK()
+    {
+        LoginFailedPanel.SetActive(false);
     }
     public void LoadLevel(int _playerID, bool _hasuma)
     {
@@ -34,4 +58,18 @@ public class Login : MonoBehaviour {
         else
             SceneManager.LoadScene("Start");
     }
+    public void LoginFailed(int _reason)
+    {
+        if (_reason == 0)
+        {
+            PasswordInput.text = "";
+            LoginFailedPanel.SetActive(true);
+
+        }
+        else
+        {
+            ButtonQuit();
+        }
+    }
+
 }

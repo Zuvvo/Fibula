@@ -18,7 +18,7 @@ namespace LoginPlugin
             public override string name { get { return "LoginPlugin"; } }
             public override string version { get { return "1.0"; } }
 
-            public override string author { get { return "Zuvvo & Daro"; } }
+            public override string author { get { return "Zuvvo"; } }
             public override string supportEmail { get { return "Zuvvo4@gmail.com"; } }
 
             public override Command[] commands
@@ -27,6 +27,7 @@ namespace LoginPlugin
                 {
                     return new Command[]
                     {
+                    new Command("UserCreate", "Turns ON and OFF User creation [on / off]", new Action<string[]>(UserCreateCommand)),
                     new Command("AddUser", "Adds an User to the DB[AddUser name password]", new Action<string[]>(AddUserCommand)),
                     new Command("LPDebug", "Turns on Plugin Debug", new Action<string[]>(DebugCommand))
                     };
@@ -45,10 +46,12 @@ namespace LoginPlugin
             private ushort _loginSAddUserSuccess;
             private ushort _loginSAddUserFailed;
 
-            private bool _allowAddUser = false;
+            private bool _allowAddUser = true;
             private bool _debug = false;
 
             private object _obj;
+
+            private int _reason;
 
             public LoginPlugin()
             {
@@ -85,8 +88,6 @@ namespace LoginPlugin
 
                         if (_debug) Interface.Log("[LoginPlugin] SQL error during setup: ");
                     }
-
-
                 }
 
                 _settings = new ConfigReader(GetSubdirectory() + "/settings.cnf");
@@ -147,29 +148,33 @@ namespace LoginPlugin
                     DarkRiftServer.Close(true);
                 }
                 ConnectionService.onServerMessage += OnServerMessage;
-
+                LogColor((_allowAddUser ? "Account Creation ON" : "Account Creation OFF"), ConsoleColor.Yellow);
             }
-            //private void OnServerMessage(ConnectionService con, NetworkMessage data)
-            //{
-            //    if(data.tag == _loginT)
-            //    {
-            //        if(data.subject == _loginSUserLogin)
-            //        {
-            //            Interface.Log("Login");
-            //        }
-            //        if(data.subject == _loginSLogoutUser)
-            //        {
-            //            Interface.Log("Logout");
-            //        }
-            //        if(data.subject == _loginSAddUser)
-            //        {
-            //            if (_allowAddUser)
-            //            {
-            //                Interface.Log("AddUser");
-            //            }
-            //        }
-            //    }
-            //}
+            private void UserCreateCommand(String[] _commandStr)
+            {
+                if(_commandStr.Length != 1)
+                {
+                    LogColor("You need to call this command with [UserCreate on] or [UserCreate off]", ConsoleColor.DarkMagenta);
+                    return;
+                }
+                if(_commandStr[0] == "on")
+                {
+                    this._allowAddUser = true;
+                    LogColor("Account Creation: " + _commandStr[0], ConsoleColor.Yellow);
+                }
+                else if (_commandStr[0] == "off")
+                {
+                    this._allowAddUser = false;
+                    LogColor("Account Creation: " + _commandStr[0], ConsoleColor.Yellow);
+                }
+            }
+
+            private void LogColor(String _text, ConsoleColor _color)
+            {
+                Console.ForegroundColor = _color;
+                Interface.Log(_text);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
             private void DebugCommand(String[] _commandStr)
             {
                 _debug = !_debug;
@@ -266,13 +271,22 @@ namespace LoginPlugin
                                     con.SendReply(_loginT, _loginSLoginSuccess, writer);
 
                                     if (_debug)
-                                        Interface.Log("[LoginPlugin] Successfull login (" + id + ").");
+                                        Interface.Log("[LoginPlugin] User with id " + id + " logged successfully");
+                                }
+                                else
+                                {
+                                    if (_debug)
+                                        Interface.Log("[LoginPlugin] User<" + _username + "> tried to login and failed");
+                                    _reason = 0;
+                                    con.SendReply(_loginT, _loginSLoginFailed, _reason);
                                 }
                             }
                         }
-                        catch
+                        catch (InvalidCastException)
                         {
                             if (_debug) Interface.Log("[LoginPlugin] Invalid data recieved in a Login request.");
+                            _reason = -1;
+                            con.SendReply(_loginT, _loginSLoginFailed, _reason);
                         }
 
 
@@ -284,6 +298,7 @@ namespace LoginPlugin
                     }
                     if (data.subject == _loginSAddUser)
                     {
+                        #region adduser
                         if (_allowAddUser)
                         {
                             try
@@ -297,14 +312,19 @@ namespace LoginPlugin
                                     {
                                         AddUser(_username, _password);
                                     }
+                                    _reason = 1;
+                                    con.SendReply(_loginT, _loginSAddUserSuccess, _reason);
                                 }
                                 Interface.Log("AddUser");
                             }
                             catch (InvalidCastException)
                             {
                                 if (_debug) Interface.Log("[LoginPlugin] Add user failed. Invalid data recieved. ");
+                                _reason = -1;
+                                con.SendReply(_loginT, _loginSAddUserFailed, _reason);
                             }
                         }
+                        #endregion
                     }
                 }
             }

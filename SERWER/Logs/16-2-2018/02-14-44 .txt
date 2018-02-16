@@ -1,0 +1,58 @@
+16-2-2018 02:14:44 	[Trace]	#### Server boot ####
+16-2-2018 02:14:44 	[Trace]	#### Server boot ####
+16-2-2018 02:14:44 	[Log]	Server mounted, listening on port 4296
+16-2-2018 02:14:44 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\LoginPlugin.dll, type of LoginPlugin.LoginPlugin.LoginPlugin
+16-2-2018 02:14:44 	[Trace]	Found plugin: C:\Users\Zuvvo\Documents\Fibula GIT\SERWER\Plugins\MySQLConnector.dll, type of MySQLConnector.Connector
+16-2-2018 02:14:44 	[Trace]	Found a total of 2 plugins.
+16-2-2018 02:14:44 	[Log]	Loaded database connector: MySQLConnector Version: 1.0
+16-2-2018 02:14:44 	[Log]	Account Creation ON
+16-2-2018 02:14:44 	[Log]	Loaded plugin: LoginPlugin Version: 1.0
+16-2-2018 02:15:34 	[Log]	Connected: 127.0.0.1:11651
+16-2-2018 02:15:40 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 02:15:41 	[Log]	[LoginPlugin] User with id 11 logged successfully
+16-2-2018 02:33:54 	[Log]	Disconnected: 127.0.0.1:11651
+16-2-2018 02:38:01 	[Log]	Connected: 127.0.0.1:12612
+16-2-2018 02:38:04 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 02:38:04 	[Log]	Disconnected: 127.0.0.1:12612
+16-2-2018 02:41:21 	[Log]	Connected: 127.0.0.1:12748
+16-2-2018 02:41:24 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 02:41:24 	[Log]	[LoginPlugin] User<132312312312312> tried to login and failed
+16-2-2018 02:41:35 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 02:41:35 	[Log]	Disconnected: 127.0.0.1:12748
+16-2-2018 02:41:48 	[Log]	Connected: 127.0.0.1:12773
+16-2-2018 02:41:53 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 02:41:53 	[Log]	[LoginPlugin] User<132132> tried to login and failed
+16-2-2018 02:41:56 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 02:41:56 	[Log]	[LoginPlugin] User<132132> tried to login and failed
+16-2-2018 02:42:09 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 02:42:09 	[Log]	Disconnected: 127.0.0.1:12773
+16-2-2018 02:43:27 	[Log]	Connected: 127.0.0.1:12839
+16-2-2018 02:43:44 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 02:43:44 	[Log]	Disconnected: 127.0.0.1:12839
+16-2-2018 02:52:31 	[Log]	Connected: 127.0.0.1:13228
+16-2-2018 02:52:57 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 02:52:57 	[Log]	Disconnected: 127.0.0.1:13228
+16-2-2018 02:54:33 	[Log]	Connected: 127.0.0.1:13308
+16-2-2018 02:54:42 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 02:54:42 	[Log]	[LoginPlugin] User with id 11 logged successfully
+16-2-2018 02:55:34 	[Log]	Disconnected: 127.0.0.1:13308
+16-2-2018 02:55:37 	[Log]	Connected: 127.0.0.1:13354
+16-2-2018 02:55:45 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 02:55:45 	[Log]	[LoginPlugin] User with id 11 logged successfully
+16-2-2018 02:55:59 	[Log]	Disconnected: 127.0.0.1:13354
+16-2-2018 02:56:02 	[Log]	Connected: 127.0.0.1:13374
+16-2-2018 02:56:13 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 02:56:13 	[Log]	Disconnected: 127.0.0.1:13374
+16-2-2018 03:08:51 	[Log]	Connected: 127.0.0.1:13906
+16-2-2018 03:09:08 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 03:09:08 	[Log]	Disconnected: 127.0.0.1:13906
+16-2-2018 03:11:28 	[Log]	Connected: 127.0.0.1:14028
+16-2-2018 03:11:38 	[Log]	Data: Sender: 1 DistributionType: All Tag-Subject: internal (255)-Disconnect (0)
+16-2-2018 03:11:38 	[Log]	Disconnected: 127.0.0.1:14028
+16-2-2018 03:12:37 	[Log]	Connected: 127.0.0.1:14083
+16-2-2018 03:12:38 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 03:12:38 	[Log]	[LoginPlugin] User with id 11 logged successfully
+16-2-2018 03:12:49 	[Log]	Disconnected: 127.0.0.1:14083
+16-2-2018 03:12:53 	[Log]	Connected: 127.0.0.1:14096
+16-2-2018 03:12:59 	[Log]	Data: Sender: 1 DistributionType: Server Tag-Subject: 10-1
+16-2-2018 03:12:59 	[Log]	[LoginPlugin] User with id 11 logged successfully
