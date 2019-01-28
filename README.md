@@ -1,2 +1,3 @@
 # Fibula
-Small team creating the best game in the world.
+
+RPG Multiplayer game. Abandoned project.
